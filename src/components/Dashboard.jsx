@@ -1,4 +1,9 @@
 import { useState } from 'react';
+import FaceTimeLogo from '../../utils/images/FaceTime.png';
+import copyButtonImg from '../../utils/images/copyButton.png';
+import chatButtonImg from '../../utils/images/chatButton.png';
+import videoButtonImg from '../../utils/images/videoButton.png';
+import checkImg from '../../utils/images/check.png';
 
 const Dashboard = ({ personalCode, onInitiateCall, onRegisterCode, disabled }) => {
   const [targetCode, setTargetCode] = useState('');
@@ -20,7 +25,7 @@ const Dashboard = ({ personalCode, onInitiateCall, onRegisterCode, disabled }) =
   return (
     <div className="dashboard_container">
       <div className="logo_container">
-        <img src="./utils/images/FaceTime.png" alt="FaceTime Logo" />
+        <img src={FaceTimeLogo} alt="FaceTime Logo" />
       </div>
 
       <div>
@@ -37,7 +42,7 @@ const Dashboard = ({ personalCode, onInitiateCall, onRegisterCode, disabled }) =
           <div className="personal_code_value_container">
             <p className="personal_code_value_paragraph">{personalCode || 'Loading...'}</p>
             <button className="personal_code_copy_button" onClick={handleCopyCode}>
-              <img src="./utils/images/copyButton.png" alt="Copy" />
+              <img src={copyButtonImg} alt="Copy" />
             </button>
           </div>
         </div>
@@ -70,13 +75,13 @@ const Dashboard = ({ personalCode, onInitiateCall, onRegisterCode, disabled }) =
               className="connecting_button"
               onClick={() => targetCode && onInitiateCall('personal_code_chat', targetCode)}
             >
-              <img src="./utils/images/chatButton.png" className="connecting_buttons_image" alt="Chat" />
+              <img src={chatButtonImg} className="connecting_buttons_image" alt="Chat" />
             </button>
             <button
               className="connecting_button"
               onClick={() => targetCode && onInitiateCall('personal_code_video', targetCode)}
             >
-              <img src="./utils/images/videoButton.png" className="connecting_buttons_image" alt="Video" />
+              <img src={videoButtonImg} className="connecting_buttons_image" alt="Video" />
             </button>
           </div>
         </div>
@@ -85,17 +90,17 @@ const Dashboard = ({ personalCode, onInitiateCall, onRegisterCode, disabled }) =
           <p className="stranger_title_container">Stranger</p>
           <div className="stranger_buttons_container">
             <button className="connecting_button">
-              <img src="./utils/images/chatButton.png" className="connecting_buttons_image" alt="Chat" />
+              <img src={chatButtonImg} className="connecting_buttons_image" alt="Chat" />
             </button>
             <button className="connecting_button">
-              <img src="./utils/images/videoButton.png" className="connecting_buttons_image" alt="Video" />
+              <img src={videoButtonImg} className="connecting_buttons_image" alt="Video" />
             </button>
           </div>
         </div>
 
         <div className="checkbox_container">
           <div className="checkbox_connection">
-            <img src="./utils/images/check.png" alt="Check" />
+            <img src={checkImg} alt="Check" />
           </div>
           <p className="checkbox_container_paragraph">Allow connection from strangers</p>
         </div>

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import sendMessageButton from '../../utils/images/sendMessageButton.png';
 
 const Messenger = ({ messages, onSendMessage, inCall, messagingReady }) => {
   const [newMessage, setNewMessage] = useState('');
@@ -58,7 +59,7 @@ const Messenger = ({ messages, onSendMessage, inCall, messagingReady }) => {
           >
             <img
               className="send_message_button_image"
-              src="./utils/images/sendMessageButton.png"
+              src={sendMessageButton}
               alt="Send"
             />
           </button>

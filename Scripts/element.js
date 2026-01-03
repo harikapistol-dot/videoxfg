@@ -11,7 +11,7 @@ export const getIncomingCallBox = (connection_type,acceptCall,rejectCall) =>{
     const imgContainer=document.createElement('div');
     imgContainer.classList.add('box_img_container');
     const img=document.createElement("img");
-    img.setAttribute("src","./utils/images/dialogAvatar.png")
+    img.setAttribute("src","/utils/images/dialogAvatar.png")
     imgContainer.appendChild(img)
     const buttonContainer=document.createElement("div");
     buttonContainer.classList.add("dialog_button_container");
@@ -19,14 +19,14 @@ export const getIncomingCallBox = (connection_type,acceptCall,rejectCall) =>{
     acceptCallButton.classList.add("dialog_accept_call_button");
     const acceptCallImg=document.createElement("img");
     acceptCallImg.classList.add("dialog_button_image");
-    acceptCallImg.setAttribute("src","./utils/images/acceptCall.png")
+    acceptCallImg.setAttribute("src","/utils/images/acceptCall.png")
     acceptCallButton.append(acceptCallImg)
     buttonContainer.appendChild(acceptCallButton);
     const rejectCallButton=document.createElement("button");
     rejectCallButton.classList.add("dialog_reject_call_button");
     const rejectCallImg=document.createElement("img");
     rejectCallImg.classList.add("dialog_button_image");
-    rejectCallImg.setAttribute("src","./utils/images/rejectCall.png")
+    rejectCallImg.setAttribute("src","/utils/images/rejectCall.png")
     rejectCallButton.append(rejectCallImg)
     buttonContainer.appendChild(rejectCallButton);
     boxContent.appendChild(title)
@@ -53,7 +53,7 @@ export const getIncomingCallBox = (connection_type,acceptCall,rejectCall) =>{
         const imgContainer=document.createElement('div');
         imgContainer.classList.add('box_img_container');
         const img=document.createElement("img");
-        img.setAttribute("src","./utils/images/dialogAvatar.png")
+        img.setAttribute("src","/utils/images/dialogAvatar.png")
         imgContainer.appendChild(img)
         const buttonContainer=document.createElement("div");
         buttonContainer.classList.add("dialog_button_container");
@@ -61,7 +61,7 @@ export const getIncomingCallBox = (connection_type,acceptCall,rejectCall) =>{
         dropCallButton.classList.add("dialog_reject_call_button");
         const dropCallImg=document.createElement("img");
         dropCallImg.classList.add("dialog_button_image");
-        dropCallImg.setAttribute("src","./utils/images/rejectCall.png")
+        dropCallImg.setAttribute("src","/utils/images/rejectCall.png")
         dropCallButton.append(dropCallImg)
         buttonContainer.appendChild(dropCallButton);
         boxContent.appendChild(title)
@@ -83,7 +83,7 @@ export const getIncomingCallBox = (connection_type,acceptCall,rejectCall) =>{
             const imgContainer=document.createElement('div');
             imgContainer.classList.add('box_img_container');
             const img=document.createElement("img");
-            img.setAttribute("src","./utils/images/dialogAvatar.png")
+            img.setAttribute("src","/utils/images/dialogAvatar.png")
             imgContainer.appendChild(img)
             const desc=document.createElement("p");
             desc.classList.add("dialog_description");
