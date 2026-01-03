@@ -1,6 +1,4 @@
-import dialogAvatar from '../../utils/images/dialogAvatar.png';
-import acceptCallImg from '../../utils/images/acceptCall.png';
-import rejectCallImg from '../../utils/images/rejectCall.png';
+
 
 const Dialog = ({ dialog, onAccept, onReject }) => {
   if (!dialog) return null;
@@ -11,20 +9,20 @@ const Dialog = ({ dialog, onAccept, onReject }) => {
         <div className="dialog_content">
           <p className="dialog_title">Incoming {dialog.callType} Call</p>
           <div className="dialog_image_container">
-            <img src={dialogAvatar} alt="Avatar" />
+            <img src="/utils/images/dialogAvatar.png" alt="Avatar" />
           </div>
           <div className="dialog_button_container">
             <button className="dialog_accept_call_button" onClick={onAccept}>
               <img
                 className="dialog_button_image"
-                src={acceptCallImg}
+                src="/utils/images/acceptCall.png"
                 alt="Accept"
               />
             </button>
             <button className="dialog_reject_call_button" onClick={onReject}>
               <img
                 className="dialog_button_image"
-                src={rejectCallImg}
+                src="/utils/images/rejectCall.png"
                 alt="Reject"
               />
             </button>
@@ -40,13 +38,13 @@ const Dialog = ({ dialog, onAccept, onReject }) => {
         <div className="dialog_content">
           <p className="dialog_title">Calling</p>
           <div className="dialog_image_container">
-            <img src={dialogAvatar} alt="Avatar" />
+            <img src="/utils/images/dialogAvatar.png" alt="Avatar" />
           </div>
           <div className="dialog_button_container">
             <button className="dialog_reject_call_button" onClick={onReject}>
               <img
                 className="dialog_button_image"
-                src={rejectCallImg}
+                src="/utils/images/rejectCall.png"
                 alt="Cancel"
               />
             </button>
@@ -62,7 +60,7 @@ const Dialog = ({ dialog, onAccept, onReject }) => {
         <div className="dialog_content">
           <p className="dialog_title">{dialog.title}</p>
           <div className="dialog_image_container">
-            <img src={dialogAvatar} alt="Avatar" />
+            <img src="/utils/images/dialogAvatar.png" alt="Avatar" />
           </div>
           <p className="dialog_description">{dialog.description}</p>
         </div>

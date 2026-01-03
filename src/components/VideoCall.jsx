@@ -1,12 +1,4 @@
 import { useEffect, useRef } from 'react';
-import logo from '../../utils/images/project_logo-removebg-preview.png';
-import micImg from '../../utils/images/mic.png';
-import micOffImg from '../../utils/images/micOff.png';
-import cameraImg from '../../utils/images/camera.png';
-import cameraOffImg from '../../utils/images/cameraOff.png';
-import hangUpImg from '../../utils/images/hangUp.png';
-import switchCameraImg from '../../utils/images/switchCameraScreenSharing.png';
-import recordingStartImg from '../../utils/images/recordingStart.png';
 
 const VideoCall = ({
   localStream,
@@ -43,7 +35,7 @@ const VideoCall = ({
     <div className="call_container">
       <div className="videos_container">
         <div className={`videos_placeholder ${inCall && remoteStream ? 'display_none' : ''}`}>
-          <img src={logo} alt="Logo" />
+          <img src="/utils/images/project_logo-removebg-preview.png" alt="Logo" />
         </div>
 
         <video
@@ -67,24 +59,24 @@ const VideoCall = ({
           <div className="call_buttons_container">
             <button className="call_button_small" onClick={onToggleMic}>
               <img
-                src={micActive ? micImg : micOffImg}
+                src={micActive ? '/utils/images/mic.png' : '/utils/images/micOff.png'}
                 alt="Mic"
               />
             </button>
             <button className="call_button_small" onClick={onToggleCamera}>
               <img
-                src={cameraActive ? cameraImg : cameraOffImg}
+                src={cameraActive ? '/utils/images/camera.png' : '/utils/images/cameraOff.png'}
                 alt="Camera"
               />
             </button>
             <button className="call_button_large" onClick={onHangUp}>
-              <img src={hangUpImg} alt="Hang Up" />
+              <img src="/utils/images/hangUp.png" alt="Hang Up" />
             </button>
             <button className="call_button_small" onClick={onRotateCamera}>
-              <img src={switchCameraImg} alt="Rotate Camera" />
+              <img src="/utils/images/switchCameraScreenSharing.png" alt="Rotate Camera" />
             </button>
             <button className="call_button_small" onClick={onToggleMute} style={{opacity: isMuted ? 0.6 : 1}}>
-              <img src={recordingStartImg} alt="Mute" />
+              <img src="/utils/images/recordingStart.png" alt="Mute" />
             </button>
           </div>
         )}
